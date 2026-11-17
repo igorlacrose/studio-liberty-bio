@@ -60,6 +60,21 @@ body {
   outline-offset: 2px;
 }
 
+.credit-link {
+  position: absolute;
+  left: 48%;
+  width: 33%;
+  top: 96.3%;
+  height: 2.2%;
+  min-height: 24px;
+  transform: translateY(-50%);
+}
+
+.credit-link:focus-visible {
+  outline: 3px solid #fff2de;
+  outline-offset: 2px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
