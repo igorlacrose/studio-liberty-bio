@@ -58,7 +58,7 @@ a.card-button:focus-visible,footer a:focus-visible{outline:3px solid white;outli
 .resultados{top:70.7%;}
 .instagram {top:77.2%;}
 .location {top:83.85%;}
-footer {position:absolute;z-index:3;bottom:3.2%;left:19%;right:11%;display:flex;align-items:center;justify-content:center;}
+footer {position:absolute;z-index:5;bottom:3.2%;left:19%;right:11%;display:flex;align-items:center;justify-content:center;}
 footer::before,footer::after{content:"";height:1px;flex:1;background:#d3a34c;margin:0 3%;}
 footer a {color:#f6efe4;font:italic 2.2cqw Georgia,serif;text-decoration:none;white-space:nowrap;}
 @media (max-width:340px) {.intro p{font-size:3.45cqw}.standard{font-size:3.2cqw}}
