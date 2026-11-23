@@ -1,94 +1,65 @@
-html {
-  background: #16120e;
-  color: #fff2de;
-}
-
-body {
-  margin: 0;
-}
-
+:root { color-scheme: dark; --bg:#17120f; --gold:#e8b65c; --gold-soft:#bc873c; }
+* {box-sizing:border-box}
+html { background:var(--bg); color:#f7f1e8; }
+body { margin:0; font-family:Arial,Helvetica,sans-serif; }
 .card {
-  position: relative;
-  width: 100%;
-  max-width: 650px;
-  margin-inline: auto;
+  position:relative; isolation:isolate; overflow:hidden;
+  width:100%; max-width:600px; aspect-ratio:941 / 1672;
+  margin-inline:auto;
+  background:
+    radial-gradient(ellipse at 25% 35%,#3e281c 0%,transparent 47%),
+    radial-gradient(ellipse at 90% 73%,#292019 0%,transparent 52%),
+    linear-gradient(140deg,#251910 0%,#16110e 51%,#1e1814 100%);
+  container-type:inline-size;
 }
-
-.artwork {
-  display: block;
-  width: 100%;
-  height: auto;
+.line {position:absolute;width:50%;height:34%;border:1px solid #a56a2c6d;border-radius:50%;pointer-events:none;z-index:2;}
+.top-line {left:-32%;top:-19%;transform:rotate(34deg)}
+.bottom-line {right:-38%;bottom:-23%;transform:rotate(36deg)}
+.portrait {position:absolute;top:14%;left:-4%;width:65%;height:78%;z-index:0;overflow:hidden;pointer-events:none;}
+.portrait video {height:100%;width:100%;object-fit:cover;object-position:48% 30%;display:block;}
+.portrait::after {content:"";position:absolute;inset:0;pointer-events:none;background:
+ linear-gradient(90deg,transparent 45%,#17120f03 61%,#17120fc7 91%,var(--bg) 100%),
+ linear-gradient(0deg,var(--bg) 0%,#17120f96 7%,transparent 25%),
+ linear-gradient(180deg,var(--bg) 0%,transparent 8%);
 }
-
-.options {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* As áreas clicáveis acompanham as coordenadas da arte de 941 × 1672. */
-.card-link {
-  position: absolute;
-  left: 44.95%;
-  width: 51.45%;
-  height: 5.75%;
-  min-height: 24px;
-  box-sizing: border-box;
-  border-radius: 7% / 35%;
-}
-
-.whatsapp {
-  top: 42.28%;
-  height: 6.97%;
-  border-radius: 999px;
-}
-
-.black-friday {
-  top: 52.05%;
-  left: 49.7%;
-  width: 46.7%;
-  height: 9.0%;
-  border-radius: 7% / 22%;
-}
-
-.instagram {
-  top: 77.15%;
-}
-
-.location {
-  top: 83.85%;
-}
-
-.card-link:hover {
-  background: rgb(255 255 255 / 8%);
-}
-
-.card-link:focus-visible {
-  outline: 3px solid #fff2de;
-  outline-offset: 2px;
-}
-
-.credit-link {
-  position: absolute;
-  left: 48%;
-  width: 33%;
-  top: 96.3%;
-  height: 2.2%;
-  min-height: 24px;
-  transform: translateY(-50%);
-}
-
-.credit-link:focus-visible {
-  outline: 3px solid #fff2de;
-  outline-offset: 2px;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
+.brand {position:absolute;z-index:3;top:2.8%;left:17.5%;width:66%;}
+.brand img {display:block;width:100%;height:auto;filter:drop-shadow(0 2px 8px #060402a5)}
+.intro {position:absolute;top:23.4%;left:45.5%;right:4%;z-index:3;text-shadow:0 1px 8px #080605a6;}
+.intro h1 {font:italic 7.1cqw/1.04 Georgia,'Times New Roman',serif;font-weight:normal;letter-spacing:-.025em;margin:0;color:#fff5e4;}
+.intro em {font-weight:normal;}
+.gold-mark {width:24%;height:2px;background:var(--gold);margin:3.6% 0 3%;}
+.intro p {font-size:3.25cqw;line-height:1.4;letter-spacing:.005em;margin:0;}
+.intro p strong {color:#ecc377;font-weight:700;}
+.links {position:absolute;inset:0;z-index:4;}
+.card-button {position:absolute;left:45%;width:51.3%;text-decoration:none;display:flex;align-items:center;justify-content:flex-start;color:#fff3dd;background:#17120fbd;border:1px solid #d8ad67;border-radius:99px;box-shadow:0 2px 12px #08070640;transition:background .15s,border-color .15s;}
+.card-button .ico {flex:0 0 26%;height:100%;display:flex;align-items:center;justify-content:center;color:#eac078;}
+.card-button .ico svg {width:7.8cqw;height:7.8cqw;padding:1.16cqw;flex:none;box-sizing:border-box;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;border:1px solid #b7894c78;border-radius:50%;background:linear-gradient(140deg,#a87a342e,#33231642);}
+.card-button .ico svg path,.card-button .ico svg rect,.card-button .ico svg circle{vector-effect:non-scaling-stroke;}
+.card-button .button-title {flex:1;text-align:center;}
+a.card-button:hover {background:#342719ef;border-color:#ffdda1;}
+a.card-button:focus-visible,footer a:focus-visible{outline:3px solid white;outline-offset:3px;}
+.whatsapp {top:42.28%;height:6.95%;background:linear-gradient(110deg,#edb85d,#facf80 48%,#b88135);color:#15110d;border:0;}
+.whatsapp:hover {background:linear-gradient(110deg,#f9cf84,#fbe4aa,#bf8a3b)!important;}
+.whatsapp .ico {color:#1d160e;}
+.whatsapp .ico svg {width:9.2cqw;height:9.2cqw;padding:1.25cqw;stroke-width:1.9;border-color:#4730186b;background:#fff5df63;}
+.whatsapp .button-title {font-size:3.95cqw;line-height:1.05;font-weight:600;letter-spacing:-.02em;}
+.whatsapp strong {font-weight:800;}
+.black-friday {top:52.1%;height:8.85%;background:linear-gradient(145deg,#1f1913,#0d0b09);border-radius:1.6cqw;}
+.black-friday .ico svg {width:9.1cqw;height:9.1cqw;padding:1.5cqw;color:#f5c97a;background:#e1a65217;border-color:#d5a4539c;}
+.black-friday .button-title strong {display:block;color:#f4c878;font-size:4.05cqw;letter-spacing:.01em;}
+.black-friday small {display:block;font:italic 3.05cqw/1.24 Georgia,serif;white-space:nowrap;margin-top:1.7%;color:#f7ede0;}
+.standard {height:5.4%;font-size:3.45cqw;letter-spacing:.025em;}
+.standard .ico {margin-left:1.5%;margin-right:4.5%;flex:0 0 22%;}
+.standard .ico svg {width:7.0cqw;height:7.0cqw;padding:1cqw;}
+.standard span:last-child {flex:1;text-align:left;white-space:nowrap;}
+.unavailable {cursor:default;}
+.standard.unavailable {opacity:.94;}
+.procedimentos{top:64.1%;}
+.resultados{top:70.7%;}
+.instagram {top:77.2%;}
+.location {top:83.85%;}
+footer {position:absolute;z-index:3;bottom:3.2%;left:19%;right:11%;display:flex;align-items:center;justify-content:center;}
+footer::before,footer::after{content:"";height:1px;flex:1;background:#d3a34c;margin:0 3%;}
+footer a {color:#f6efe4;font:italic 2.2cqw Georgia,serif;text-decoration:none;white-space:nowrap;}
+@media (max-width:340px) {.intro p{font-size:3.45cqw}.standard{font-size:3.2cqw}}
+@media (prefers-reduced-motion:reduce){.card-button {transition:none}}
