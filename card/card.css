@@ -43,6 +43,14 @@ body {
   border-radius: 999px;
 }
 
+.black-friday {
+  top: 52.05%;
+  left: 49.7%;
+  width: 46.7%;
+  height: 9.0%;
+  border-radius: 7% / 22%;
+}
+
 .instagram {
   top: 77.15%;
 }
