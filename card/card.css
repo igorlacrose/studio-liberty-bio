@@ -24,11 +24,12 @@ body { margin:0; font-family:Arial,Helvetica,sans-serif; }
 }
 .brand {position:absolute;z-index:3;top:2.8%;left:17.5%;width:66%;}
 .brand img {display:block;width:100%;height:auto;filter:drop-shadow(0 2px 8px #060402a5)}
-.intro {position:absolute;top:23.4%;left:45.5%;right:4%;z-index:3;text-shadow:0 1px 8px #080605a6;}
+.intro {position:absolute;top:21.8%;left:45.5%;right:4%;z-index:3;text-shadow:0 1px 8px #080605a6;}
 .intro h1 {font:italic 7.1cqw/1.04 Georgia,'Times New Roman',serif;font-weight:normal;letter-spacing:-.025em;margin:0;color:#fff5e4;}
 .intro em {font-weight:normal;}
-.gold-mark {width:24%;height:2px;background:var(--gold);margin:3.6% 0 3%;}
-.intro p {font-size:3.25cqw;line-height:1.4;letter-spacing:.005em;margin:0;}
+.gold-mark {width:24%;height:2px;background:var(--gold);margin:2.5% 0 2.5%;}
+.intro p {font-size:3.1cqw;line-height:1.3;letter-spacing:.005em;margin:0;}
+.intro p.tagline {color:#f4c778;font:italic 3.35cqw/1.25 Georgia,serif;margin:1.3% 0 0;}
 .intro p strong {color:#ecc377;font-weight:700;}
 .links {position:absolute;inset:0;z-index:4;}
 .card-button {position:absolute;left:45%;width:51.3%;text-decoration:none;display:flex;align-items:center;justify-content:flex-start;color:#fff3dd;background:#17120fbd;border:1px solid #d8ad67;border-radius:99px;box-shadow:0 2px 12px #08070640;transition:background .15s,border-color .15s;}
